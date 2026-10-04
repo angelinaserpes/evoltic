@@ -7,9 +7,12 @@ import Survey from './pages/Survey.jsx'
 function ScrollManager() {
   const { pathname, hash } = useLocation()
   useEffect(() => {
+    // Newer Chrome returns a Promise from scrollIntoView/scrollTo. Never return it
+    // from the effect, or React calls it as a cleanup function and the app crashes.
     if (hash) {
-      const el = document.querySelector(hash)
-      if (el) return el.scrollIntoView()
+      let el = null
+      try { el = document.querySelector(hash) } catch { el = null }
+      if (el) { el.scrollIntoView(); return }
     }
     window.scrollTo(0, 0)
   }, [pathname, hash])
