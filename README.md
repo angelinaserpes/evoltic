@@ -1,22 +1,42 @@
-# Evoltic
+# Evoltic ⚡
 
-A neutral EV-charging capacity planner for housing societies in Mumbai and Navi Mumbai. Built for SPARK-A-THON 2026 (E-Cell FCRIT, Smart Energy).
+**EV charging capacity planner for housing societies** — live at [evoltic.vercel.app](https://evoltic.vercel.app)
 
-A society committee enters three numbers from its electricity bill and sees how many EVs the building can safely charge today, how many with overnight smart scheduling, and when it would need a load upgrade. It also simulates the night in 15-minute steps, uses a resident survey, and produces a PDF report and a draft society EV policy for the AGM vote.
+Built for **SPARK-A-THON 2026** (E-Cell FCRIT, Smart Energy domain).
+
+Housing societies in Mumbai and Navi Mumbai face a real problem: residents want to charge EVs overnight, but no one knows if the building's electrical supply can handle it. Evoltic solves this — a committee member enters three numbers from the electricity bill and instantly sees:
+
+- How many EVs the building can safely charge **right now**
+- How many with **overnight smart scheduling**
+- When the building would need a **load upgrade**
+- A **15-minute simulation** of the night's charging cycle
+- A **PDF report** and draft **society EV policy** ready for the AGM vote
+
+Everything runs in the browser — no data ever leaves the device.
+
+> Evoltic gives a planning estimate, not an electrical audit. A licensed electrician should verify any installation.
+
+## Stack
+
+| | |
+|---|---|
+| Framework | React 19 + React Router 7 |
+| Build | Vite 8 |
+| Language | JavaScript |
 
 ## Run locally
 
-```
+```bash
 npm install
 npm run dev
 ```
 
 ## Build
 
-```
+```bash
 npm run build
 ```
 
-Deploys as a static site (Vercel config included). Everything runs in the browser; no data leaves the device.
+---
 
-Evoltic gives a planning estimate, not an electrical audit. A licensed electrician should verify any installation.
+*SPARK-A-THON 2026 — E-Cell FCRIT*
